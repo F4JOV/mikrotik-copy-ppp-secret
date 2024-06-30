@@ -1,8 +1,10 @@
 # mikrotik-copy-ppp-secret
 ## Description
-This script permits to copy all secret account of a Mikrotik router to an other one
+This script permits to copy all secret account of a Mikrotik router to an other one.
 
-The users created on the remote router are those configured on the router where this script is executed
+The users created on the remote router are those configured on the router where this script is executed.
+
+This script has been tested on RouterOS V7.15.2 and V7.13.5
 
 Thanks to Winand for his Json parser script : [https://github.com/Winand/mikrotik-json-parser/]
 
