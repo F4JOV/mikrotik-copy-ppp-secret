@@ -1,2 +1,21 @@
 # mikrotik-copy-ppp-secret
-Script used to copy secret accounts from a Mikrotik router to an other
+## Description
+This script permits to copy all secret account of a Mikrotik router to an other one
+
+The users created on the remote router are those configured on the router where this script is executed
+
+Thanks to Winand for his Json parser script : [https://github.com/Winand/mikrotik-json-parser/]
+
+## Setup
+On your Mikrotik router, you have to create two scripts :
+* First is named `JParseFunctions` and contains the content of JParseFunctions.rsc
+* The second is named `push_secrets` and contains the content of push_secrets.rsc ![Script list picture unavailable...](img/scripts_list.png "Script list on mikrotik")
+* Before using the script, you must change the environment parameters, they are defined in `push_secrets` script :
+  - ```remoteIP``` var is used to store the IP address of the router you want to copy the secrets to
+  - ```remoteUser``` var is used to store the user of administration account on the remote router
+  - ```remotePassword``` var is used to store the password of administration account on the remote router
+  - ```localSecretOnly``` if you want to keep some of your secrets on your router only, add in the comment section of your secrets the string stored in this var
+  - ```useHttps``` set it as true if your remote router is set correctly (service enabled and certificate created), set it as false if you want o use http only
+
+## Lauch
+Once you have set all the environment variables, you can open a terminal and execute this command ```/system/script/run push_routes```
