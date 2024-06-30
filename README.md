@@ -17,7 +17,8 @@ On your Mikrotik router, you have to create two scripts :
   - ```remoteUser``` var is used to store the user of administration account on the remote router
   - ```remotePassword``` var is used to store the password of administration account on the remote router
   - ```localSecretOnly``` if you want to keep some of your secrets on your router only, add in the comment section of your secrets the string stored in this var
-  - ```useHttps``` set it as true if your remote router is set correctly (service enabled and certificate created), set it as false if you want o use http only
+  - ```useHttps``` set it as true if your remote router is set correctly (service enabled and certificate created), set it as false if you want or use http only
+* Note that if you have created you own profiles on the router and assigned them to some secret accounts, you have to create them on the remote router before executing this script
 
 ## Lauch
 Once you have set all the environment variables, you can open a terminal and execute this command ```/system/script/run push_routes```
