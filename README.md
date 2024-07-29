@@ -19,6 +19,8 @@ On your Mikrotik router, you have to create two scripts :
   - ```localSecretOnly``` if you want to keep some of your secrets on your router only, add in the comment section of your secrets the string stored in this var
   - ```useHttps``` set it as true if your remote router is set correctly (service enabled and certificate created), set it as false if you want or use http only
 * Note that if you have created you own profiles on the router and assigned them to some secret accounts, you have to create them on the remote router before executing this script
+* Local address field is not yet supported
+* Please avoid any one of these caracters in your secrets passwords or it returns a fetch 400 when posting new user on the remote router : <span style="color:red">**" ' `**</span>
 
 ## Launch
 Once you have set all the environment variables, you can open a terminal and execute this command ```/system/script/run push_secrets```
