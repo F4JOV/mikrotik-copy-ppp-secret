@@ -20,5 +20,5 @@ On your Mikrotik router, you have to create two scripts :
   - ```useHttps``` set it as true if your remote router is set correctly (service enabled and certificate created), set it as false if you want or use http only
 * Note that if you have created you own profiles on the router and assigned them to some secret accounts, you have to create them on the remote router before executing this script
 
-## Lauch
-Once you have set all the environment variables, you can open a terminal and execute this command ```/system/script/run push_routes```
+## Launch
+Once you have set all the environment variables, you can open a terminal and execute this command ```/system/script/run push_secrets```
